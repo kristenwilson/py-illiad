@@ -1,0 +1,2 @@
+api_base = '' # Enter your institution's base API URL here. It should look like 'https://your.illiad.edu/ILLiadWebPlatform'.
+api_key = '...' # Enter your API key here.
