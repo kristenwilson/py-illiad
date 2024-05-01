@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # post_transaction.py
-# Description: A demo script that creates a new ILLiad transaction using ILLiad Web Services.
+# Description: A demo script that creates a new ILLiad transaction using the ILLiad Web Platform.
 # Author: Kristen Wilson, NC State Libraries, kmblake@ncsu.edu
 
 import requests
