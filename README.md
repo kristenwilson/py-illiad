@@ -1,5 +1,5 @@
 # py-illiad
-Demo scripts for using ILLiad Web Services APIs with Python.
+Demo scripts for using ILLiad Web Platform APIs with Python.
 
 These scripts can be used as a starting point to incorporate ILLiad API functions into your Python programs. More information about the ILLiad Web Platform is available at https://support.atlas-sys.com/hc/en-us/articles/360011809394-The-ILLiad-Web-Platform-API.
 
