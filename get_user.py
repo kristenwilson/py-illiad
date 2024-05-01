@@ -1,9 +1,14 @@
+#!/usr/bin/env python3
+# get_user.py
+# Description: A demo script that checks an ILLiad user's status and returns user details using ILLiad Web Services.
+# Author: Kristen Wilson, NC State Libraries, kmblake@ncsu.edu
+
 import requests
 import json
 import sys
 from config import api_key, api_base
 
-user_id = '' # Enter the external user ID here
+user_id = 'xxx@yourschool.edu' # Enter the external user ID here
 api_url = api_base + '/Users/ExternalUserID/' + str(user_id)
 
 headers = {'ContentType': 'application/json', 'ApiKey': api_key}
@@ -19,4 +24,4 @@ if response.status_code == 200:
     
 
 else:
-    print('Transaction not found.')
+    print(str(response.status_code) + ': ' + response.json()['Message'] + '\n')

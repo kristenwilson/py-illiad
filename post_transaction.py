@@ -1,10 +1,16 @@
+#!/usr/bin/env python3
+# post_transaction.py
+# Description: A demo script that creates a new ILLiad transaction using ILLiad Web Services.
+# Author: Kristen Wilson, NC State Libraries, kmblake@ncsu.edu
+
 import requests
+import json
 from config import api_key, api_base
 
 api_url = api_base + '/Transaction/'
 headers = {'ContentType': 'application/json', 'ApiKey': api_key}
-transaction = { # The data below is fake and is only used for demo purposes. You can replace it with your own data if you choose.
-            'ExternalUserId': '', # Replace with the external user ID of the requester.
+transaction = { # The data below is fake and is only used for demo purposes. You can replace it with your own data.
+            'ExternalUserId': 'xxx@yourschool.edu', # Replace with the external user ID of the requester.
             'RequestType': 'Article',
             'ProcessType': 'Borrowing',
             'PhotoJournalTitle': 'Journal of the American Chemical Society',
@@ -20,6 +26,7 @@ transaction = { # The data below is fake and is only used for demo purposes. You
 response = requests.post(api_url, headers=headers, json=transaction)
 
 if response.status_code == 200:
-    print('Success!')
+    print('Transaction details:\n')
+    print(json.dumps(response.json(), indent=4) + '\n')
 else:
     print(str(response.status_code) + ': ' + response.json()['Message'] + '\n')
